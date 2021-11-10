@@ -29,21 +29,44 @@ function Navigation() {
 export default Navigation
 
 ```
-> Movie.js에 Link컴포넌트 추가
+> App.js 해쉬라우터를 브라우저라우터로 변경하기  
+(router 사용 후 주소에 hash(#)가 나타나는 현상을 없애기위함)  
 ```javascript
-<Link to={{ pathname: "/movie-detail", state: { year, title, summary, poster, genres } }}>
+import './App.css'
+import {BrowserRouter, Route} from 'react-router-dom'
+import About from './routes/About'
+import Home from './routes/Home'
+import Navigation from './components/Navigation'
+import Detail from './routes/Detail'
+function App(){
+    return (
+    <BrowserRouter>
+        <Navigation />
+        <Route path = '/' exact={true} component={Home} />
+        <Route path = '/about' component={About} />
+        <Route path = '/movie-detale' componente={Detail} />
+    </BrowserRouter>
+    )
+}
+
+
+export default App;
+
 ```
-> 리다이렉트 기능 만들어 보기  
+> Deploy명령어 
+```javascript
+- npm run deploy
+```
 
-• 리다이렉트 기능을 사용하기 위해서는 route props의 history 키를 활용해야 한다.  
-• history키에는 push, go, goBack, goForward와 같은 키가 있으며, 그 키에는 URL을 변경해 주는함수들이 있다.   
-• 이 함수들을 이용해서 리다이렉트 기능을 구현한다.
-> History 키 살펴보기    
+> 스크립트 태그 추가하기
+``` javascript
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+``` 
 
-• 주소창에 localhost:3000을 입력해서 이동한 다음 아무 영화나 눌러 이동한다.  
-• console에서 history에 출력된 값을 확인한다.  
-• 액션03에서는 componentDidMount() 생명주기 함수를 사용해 Detail 컴포넌트가 마운트될 때push()함수를 실행하도록 한다.
-
+``` javascript
+ <script src="like_button.js"></script>
+```
 
 
 
