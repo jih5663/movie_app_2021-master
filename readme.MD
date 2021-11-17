@@ -85,8 +85,49 @@ npx create-react-app markdown
 - npx인 이유 => npm 5.2+ 버전의 패키지 실행 도구라고 함 !   
 npm으로 create하려다가 실패했음 !  
 
-> 
+> package-lock.json  코드 변경사항확인
 ```javascript
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "argparse": {
+      "version": "1.0.10",
+      "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
+      "integrity": "sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==",
+      "requires": {
+        "sprintf-js": "~1.0.2"
+      }
+    },
+    "autolinker": {
+      "version": "3.14.3",
+      "resolved": "https://registry.npmjs.org/autolinker/-/autolinker-3.14.3.tgz",
+      "integrity": "sha512-t81i2bCpS+s+5FIhatoww9DmpjhbdiimuU9ATEuLxtZMQ7jLv9fyFn7SWNG8IkEfD4AmYyirL1ss9k1aqVWRvg==",
+      "requires": {
+        "tslib": "^1.9.3"
+      }
+    },
+    "remarkable": {
+      "version": "2.0.1",
+      "resolved": "https://registry.npmjs.org/remarkable/-/remarkable-2.0.1.tgz",
+      "integrity": "sha512-YJyMcOH5lrR+kZdmB0aJJ4+93bEojRZ1HGDn9Eagu6ibg7aVZhc3OWbbShRid+Q5eAfsEqWxpe+g5W5nYNfNiA==",
+      "requires": {
+        "argparse": "^1.0.10",
+        "autolinker": "^3.11.0"
+      }
+    },
+    "sprintf-js": {
+      "version": "1.0.3",
+      "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
+      "integrity": "sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw="
+    },
+    "tslib": {
+      "version": "1.14.1",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz",
+      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
+    }
+  }
+}
 
 ```
 
