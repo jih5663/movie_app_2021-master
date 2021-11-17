@@ -78,9 +78,15 @@ ReactDOM.render(
  ```
 
 
+> markdown 만들기
+```javascript
+npx create-react-app markdown
+```
+- npx인 이유 => npm 5.2+ 버전의 패키지 실행 도구라고 함 !   
+npm으로 create하려다가 실패했음 !  
+
 > 
 ```javascript
-
 
 ```
 
