@@ -2,6 +2,26 @@
 <br>
 
 
+  
+## [ 11월 24일 ]
+<br>
+# 네번째 예제
+
+> create-react-app으로 remarkable 사용하기
+- create-reacte-app으로 markdown-editor프로젝트를 생성한다.
+- 정상동작을 확인한다.
+- app.js에 있는 필요없는 코드를 삭제한다.
+- app.js에 문서의 코드를 복사해 넣는다.
+- componenet의 이름을 App으로 수정한다.
+- rendering은 index.js에 위임한다.
+- remarkable을 설치한다
+- React와 Remarkable을 import한다.
+- 동작이 되는지 확인한다.
+
+ ```javascript
+
+ ```
+
 
 ## [ 11월 17일 ]
 <br>
