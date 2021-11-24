@@ -5,7 +5,7 @@
   
 ## [ 11월 24일 ]
 <br>
-# 네번째 예제
+# 네번째 예제, 리액트 개념
 
 > create-react-app으로 remarkable 사용하기
 - create-reacte-app으로 markdown-editor프로젝트를 생성한다.
@@ -16,11 +16,51 @@
 - rendering은 index.js에 위임한다.
 - remarkable을 설치한다
 - React와 Remarkable을 import한다.
-- 동작이 되는지 확인한다.
+- 동작이 되는지 확인한다.  
 
+> code review
+- 외부 컴포넌트를 사용하기 위해 생성자 내에 객체를 생성한다.
+- state를 이용하여 Remarkable에 변환할 마크다운 문장을 제출한다.
+- 글이 입력되면 handleChange 이벤트를 사용하여 state의 value를 갱신한다.
+- getRawMarkup()메소드를 통해 html을 반환 받는다.
+  
+
+> JSX에 표현식 포함하기
  ```javascript
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
 
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
  ```
+
+ > JSX 자식정의
+ - 태그가 비어있다면 XML처럼 /> 를 이용해 바로 닫아주어야 합니다.
+ ```javascript
+const element = <img src={user.avatarUrl} />;
+ ```  
+
+- JSX 태그는 자식을 포함할 수 있습니다.
+ ```javascript
+const element = (
+  <div>
+    <h1>Hello!</h1>
+    <h2>Good to see you here.</h2>
+  </div>
+);
+ ```
+
+ > DOM에 엘리먼트 렌더링하기
+  ```javascript
+<div id="root"></div> 
+```
+- React 엘리먼트를 루트 DOM 노드에 렌더링하려면 둘 다 ReactDOM.render()로 전달하면 됩니다.
+```javascript
+const element = <h1>Hello, world</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+  ```
 
 
 ## [ 11월 17일 ]
