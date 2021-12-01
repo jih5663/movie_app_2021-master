@@ -60,6 +60,22 @@ class Clock extends React.Component {
   }
 }
 ```
+#이벤트 처리하기
+- React의 이벤트는 소문자 대신 캐멀 케이스(camelCase)를 사용합니다.
+- JSX를 사용하여 문자열이 아닌 함수로 이벤트 핸들러를 전달합니다.
+> html의 경우
+```javascript
+<button onclick="activateLasers()">
+  Activate Lasers
+</button>
+```
+
+> React의 경우
+```javascript
+<button onClick={activateLasers}>
+  Activate Lasers
+</button>
+```
 
 ---
 
