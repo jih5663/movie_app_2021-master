@@ -3,6 +3,66 @@
 
 
   
+## [ 12월 01일 ]
+<br>
+# 리액트개념
+
+> 컴포넌트 추출
+- 컴포넌트 추출: 컴포넌트를 여러 개의 작은 컴포넌트로 나누어 관리 편의성 및 가독성을 높인다
+- props는 읽기 전용이기 때문에 함수 혹은 클래스 컴포넌트 모두 자체 props를 수정해서는 안된다
+- React는 매우 유연하지만 한 가지 엄격한 규칙이 있다. 모든 React컴포넌트는 자신의 props를 다출 때 반드시 순수 함수처럼 동작해야 합니다.
+
+>  Avatar 옆에 사용자의 이름을 렌더링하는 UserInfo 컴포넌트를 추출하기
+ ```javascript
+function UserInfo(props) {
+  return (
+    <div className="UserInfo">
+      <Avatar user={props.user} />
+      <div className="UserInfo-name">
+        {props.user.name}
+      </div>
+    </div>
+  );
+}
+ ```
+  
+
+#props는 읽기 전용이다
+ ```javascript
+- function sum(a, b) {
+  return a + b;
+  }
+```
+- 이런 함수들은 순수 함수라고 호칭합니다.   
+입력값을 바꾸려 하지 않고 항상 동일한 입력값에 대해 동일한 결과를 반환하기 때문입니다.  
+반면에 다음 함수는 자신의 입력값을 변경하기 때문에 순수 함수가 아닙니다.
+ ```javascript
+function withdraw(account, amount) {
+  account.total -= amount;
+}
+```
+  
+#함수에서 클래스로 변환하기
+1. React.Component를 확장하는 동일한 이름의 ES6 class를 생성합니다.
+2. render()라고 불리는 빈 메서드를 추가합니다.
+3. 함수의 내용을 render() 메서드 안으로 옮깁니다.
+4. render() 내용 안에 있는 props를 this.props로 변경합니다.
+5. 남아있는 빈 함수 선언을 삭제합니다.
+ ```javascript
+class Clock extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+---
+
 ## [ 11월 24일 ]
 <br>
 # 네번째 예제, 리액트 개념
